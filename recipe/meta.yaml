@@ -1,13 +1,13 @@
 {% set name = "mkdocs-redirects" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mkdocs-redirects-{{ version }}.tar.gz
-  sha256: 9420066d70e2a6bb357adf86e67023dcdca1857f97f07c7fe450f8f1fb42f861
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 3094981b42ffab29313c2c1b8ac3969861109f58b2dd58c45fc81cd44bfa0095
 
 build:
   noarch: python

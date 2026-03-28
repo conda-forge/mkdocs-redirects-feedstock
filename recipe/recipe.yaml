@@ -2,18 +2,18 @@ schema_version: 1
 
 context:
   name: mkdocs-redirects
-  version: 1.2.1
+  version: "1.2.3"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mkdocs-redirects-${{ version }}.tar.gz
-  sha256: 9420066d70e2a6bb357adf86e67023dcdca1857f97f07c7fe450f8f1fb42f861
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 5e980330999299729a2d6a125347d1af78023d68a23681a4de3053ce7dfe2e51
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 

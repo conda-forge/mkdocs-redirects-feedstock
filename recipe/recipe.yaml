@@ -24,7 +24,8 @@ requirements:
     - hatchling
   run:
     - python >=${{ python_min }}
-    - mkdocs >=1.1.1
+    - mkdocs >=1.2,<=1.6.1
+    - properdocs >=1.6.5
 
 tests:
   - python:
